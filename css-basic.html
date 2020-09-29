@@ -4,20 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <style>
         /* @import url("style.css"); */
+        h1 {
+            color:tomato
+        }
         .abc {
             color: orange;
         }
         #xyz {
             color:steelblue
         }
+        p {
+            color: green;
+        }
+        p {
+            color: yellow;
+        }
+        p {
+            color: red;
+        }
     </style>
+     
 </head>
 <body>
-    <h1 class="abc">title</h1>
-    <p id="xyz">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum deserunt illo dicta velit, eum alias.</p>
+    <h1 class="abc" id="xyz">title</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum deserunt illo dicta velit, eum alias.</p>
     <h2 style="color: red">title 2</h2>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis expedita voluptate eveniet placeat soluta. Corporis itaque quae maxime quibusdam at veritatis rerum, sequi vel. Sit vitae distinctio suscipit ipsum et?
@@ -29,5 +42,10 @@
         <li>list</li>
         <li>list</li>
     </ul>
+    <script>
+        let a = document.getElementById('xyz');
+        let b = document.getElementsByClassName('abc')
+        console.log(b);
+    </script>
 </body>
 </html>
