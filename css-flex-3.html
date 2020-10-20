@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Gill sans mt";
+        }
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            background-color: #ccc;
+        }
+        .box {
+            /* width: calc(100% / 3); */
+            flex-basis: 300px;
+            padding: 15px;
+            background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
+        }
+        .box:nth-of-type(1){
+            flex-grow: 1;
+        }
+        .box:nth-of-type(2){
+            flex-grow: 10;
+        }
+        .box:nth-of-type(3){
+            flex-grow: 1;
+        }
+        /* 
+            1200 - 900 = 300 剩餘的空間
+            300 * (1 / 1+10+1) = 25
+            300 * (10 / 1+10+1) = 250
+            300 * (1 / 1+10+1) = 25
+        
+         */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam laboriosam, recusandae cum amet mollitia quasi dolorem. Itaque corporis optio excepturi illum fugit consequatur animi, neque ad, aspernatur vitae commodi unde?
+        </div>
+        <div class="box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam laboriosam, recusandae cum amet mollitia quasi dolorem. Itaque corporis optio excepturi illum fugit consequatur animi, neque ad, aspernatur vitae commodi unde?
+        </div>
+        <div class="box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam laboriosam, recusandae cum amet mollitia quasi dolorem. Itaque corporis optio excepturi illum fugit consequatur animi, neque ad, aspernatur vitae commodi unde?
+        </div>
+
+    </div>
+</body>
+</html>
