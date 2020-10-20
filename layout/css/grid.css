@@ -59,3 +59,12 @@
     [class^="col"] 開頭
     [class$="col"] 結尾
 */
+.no-padding > [class^="col"]{
+    padding: 0;
+}
+/* 
+    後代
+    a b {}
+    子代
+    a>b {
+*/
