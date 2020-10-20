@@ -14,28 +14,41 @@
             width: 1200px;
             margin: auto;
             background-color: #ccc;
+
+            /* flex-wrap: wrap; */
         }
         .box {
             /* width: calc(100% / 3); */
-            flex-basis: 300px;
+            flex-basis: 500px;
             padding: 15px;
             background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
         }
         .box:nth-of-type(1){
-            flex-grow: 1;
+            /* flex-grow: 1; */
+            flex-shrink: 1;
         }
         .box:nth-of-type(2){
-            flex-grow: 10;
+            /* flex-grow: 10; */
+            flex-shrink: 10;
+
         }
         .box:nth-of-type(3){
-            flex-grow: 1;
+            /* flex-grow: 1; */
+            flex-shrink: 1;
+
         }
         /* 
+            flex-grow
             1200 - 900 = 300 剩餘的空間
-            300 * (1 / 1+10+1) = 25
-            300 * (10 / 1+10+1) = 250
-            300 * (1 / 1+10+1) = 25
+            300 * (1  / 1+10+1) = 25  300+25  = 325
+            300 * (10 / 1+10+1) = 250 300+250 = 550
+            300 * (1  / 1+10+1) = 25  300+25  = 325
         
+            flex-shrink
+            1200 - 1500 = -300 不夠的空間
+            300 * (1  / 1+10+1) = 25  500-25  = 475
+            300 * (10 / 1+10+1) = 250 500-250 = 250
+            300 * (1  / 1+10+1) = 25  500-25  = 475
          */
     </style>
 </head>
@@ -50,6 +63,7 @@
         <div class="box">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam laboriosam, recusandae cum amet mollitia quasi dolorem. Itaque corporis optio excepturi illum fugit consequatur animi, neque ad, aspernatur vitae commodi unde?
         </div>
+       
 
     </div>
 </body>
