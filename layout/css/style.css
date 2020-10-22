@@ -21,3 +21,17 @@ header p {
 #about h3 {
     font-size: 28px;
 }
+/* service */
+#service {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);}
+#service h2 {
+    font-size: 45px;
+}
+#service h3 {
+    font-size: 28px;
+}
+#service hr {
+    border-color: var(--dark);
+}
