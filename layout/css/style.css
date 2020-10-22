@@ -35,3 +35,10 @@ header p {
 #service hr {
     border-color: var(--dark);
 }
+#contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#contact h2 {
+    font-size: 45px;
+}
