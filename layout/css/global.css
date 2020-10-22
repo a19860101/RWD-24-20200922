@@ -149,3 +149,8 @@ img {
 .py2 {padding-top: calc(2 * var(--spacing));padding-bottom: calc(2 * var(--spacing));}
 .py3 {padding-top: calc(3 * var(--spacing));padding-bottom: calc(3 * var(--spacing));}
 .pyauto {padding-top: auto;padding-bottom: auto;}
+
+/* hr */
+hr {
+    border-bottom: 1px solid var(--light);
+}
