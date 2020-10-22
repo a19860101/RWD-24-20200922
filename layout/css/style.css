@@ -9,3 +9,15 @@ header h1 {
 header p {
     font-size: 22px;
 }
+
+/* about */
+#about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#about h2 {
+    font-size: 45px;
+}
+#about h3 {
+    font-size: 28px;
+}

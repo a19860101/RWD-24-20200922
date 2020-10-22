@@ -13,14 +13,14 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: "Gill Sans MT","Microsoft Jhenghei";
+    font-family: "Segoe UI","Microsoft Jhenghei";
 }
 table {
     border-collapse: collapse;
 }
 
 img {
-    width: 100%;
+    /* width: 100%; */
 }
 .w100 {
     width: 100%;
