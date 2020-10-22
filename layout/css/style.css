@@ -35,10 +35,27 @@ header p {
 #service hr {
     border-color: var(--dark);
 }
+/* contact */
 #contact {
     padding-top: 100px;
     padding-bottom: 100px;
 }
 #contact h2 {
     font-size: 45px;
+}
+#contact li {
+    font-size: 20px;
+}
+#contact i {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+#contact .sns i {
+    width: auto;
+    margin-right: 10px;
+}
+li {
+    list-style: none;
 }
