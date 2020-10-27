@@ -98,3 +98,23 @@ header p {
 li {
     list-style: none;
 }
+
+
+#gotop {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #f05454;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    right: 30px;
+    bottom: 30px;
+    position: fixed;
+}
+#gotop i {
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+}
