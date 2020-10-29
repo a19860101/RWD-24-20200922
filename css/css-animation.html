@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #28abb9;
+            transform-origin: left;
+
+            animation-name: move;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            animation-timing-function: cubic-bezier(.47,-0.55,.57,1.42);
+        }
+        @keyframes move {
+            from {transform: scaleX(1);}
+            to {transform:scaleX(5);}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
