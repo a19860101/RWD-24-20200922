@@ -35,7 +35,25 @@ nav {
     padding-left: 10px;
     padding-right: 10px;
     color: #ececec;
+
+    position: relative;
+    
 }
+.nav-link::after {
+    content:"";
+    border-bottom: 2px solid #ececec;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    left: 0;
+    bottom: -5px;
+    transition: 400ms;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
 header {
     background: url("https://picsum.photos/id/90/1600/800") center center no-repeat;
     background-size: cover;
