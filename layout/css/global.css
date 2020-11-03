@@ -60,7 +60,7 @@ img {
 
 
 /* spacing */
-.m-3 {margin: 0;}
+.m-0 {margin: 0;}
 .m-1 {margin: calc(1 * var(--spacing));}
 .m-2 {margin: calc(2 * var(--spacing));}
 .m-3 {margin: calc(3 * var(--spacing));}
