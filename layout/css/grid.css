@@ -10,9 +10,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-.col {
-    flex: 1 0 0%;
-}
+
 .col-1 {
     flex: 0 0 calc(100% / 12 * 1);
     /* flex: [grow] [shrink] [basis] */
@@ -53,14 +51,15 @@
 .col-12 {
     flex: 0 0 calc(100% / 12 * 12);
 }
+.col {
+    flex: 1 0 0%;
+}
 @media(min-width:480px){
     .fixed-width {
         width: 480px;
         margin: auto;
     }
-    .col-sm {
-        flex: 1 0 0%;
-    }
+
     .col-sm-1 {
         flex: 0 0 calc(100% / 12 * 1);
     }
@@ -97,15 +96,16 @@
     .col-sm-12 {
         flex: 0 0 calc(100% / 12 * 12);
     }
+    .col-sm {
+        flex: 1 0 0%;
+    }
 }
 @media(min-width:720px){
     .fixed-width {
         width: 720px;
         margin: auto;
     }
-    .col-lg {
-        flex: 1 0 0%;
-    }
+
     .col-lg-1 {
         flex: 0 0 calc(100% / 12 * 1);
     }
@@ -142,15 +142,16 @@
     .col-lg-12 {
         flex: 0 0 calc(100% / 12 * 12);
     }
+    .col-lg {
+        flex: 1 0 0%;
+    }
 }
 @media(min-width:1200px){
     .fixed-width {
         width: 1200px;
         margin: auto;
     }
-    .col-xl {
-        flex: 1 0 0%;
-    }
+
     .col-xl-1 {
         flex: 0 0 calc(100% / 12 * 1);
     }
@@ -186,6 +187,9 @@
     }
     .col-xl-12 {
         flex: 0 0 calc(100% / 12 * 12);
+    }
+    .col-xl {
+        flex: 1 0 0%;
     }
 }
 /* 屬性選取器 */
