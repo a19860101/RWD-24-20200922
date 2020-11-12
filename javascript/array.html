@@ -13,13 +13,21 @@
         a[2] = 'Cat';
         //索引值
 
-        let b = ['Apple','Banana','Cat','Dog','Egg'];
+        let b = ['Apple','Banana','Cat','Dog','Egg','Fork'];
         // console.log(b);
 
         //陣列迭代
-        console.log(b.length);
-        for(let i=0;i<b.length;i++){
-            console.log(b[i]);
+        // console.log(b.length);
+        // for(let i=0;i<b.length;i++){
+        //     console.log(b[i]);
+        // }
+
+        // for(let idx in b){
+        //     console.log(b[idx]);
+        // }
+
+        for(let item of b){
+            console.log(item);
         }
     </script>
 
