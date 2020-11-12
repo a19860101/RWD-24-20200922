@@ -30,9 +30,23 @@
         //     console.log(item); 
         // }
 
-        b.forEach(function(item,idx){
-            console.log(item,idx);
-        });
+        // b.forEach(function(item,idx){
+        //     console.log(item,idx);
+        // });
+
+        const drinks = ['紅茶','綠茶','奶茶','波霸奶茶','冰淇淋紅茶'];
+        drinks.push('拿鐵');
+        drinks.pop();
+
+        drinks.unshift('水');
+        drinks.shift();
+
+        // console.log(drinks);
+        for(let drink of drinks){
+            console.log(drink);
+        }
+
+
     </script>
 
 </body>
