@@ -8,14 +8,28 @@
 <body>
     <script>
         //宣告 test函式
-        function test(){
+        // 函式表達式 function expression
+        // function test(){
+        //     console.log('test');
+        // }
+        // function square(x){
+        //     console.log(x * x);
+        // }
+        // square(11);
+        
+
+        // 函式宣告式 function decalare
+        let test = function(){
             console.log('test');
         }
+        test();
+        
 
-        function square(x){
-            console.log(x * x);
+        let square = function(x){
+            console.log(x*x);
         }
-        square(11);
+        square(12);
+        //提升性
     </script>
 </body>
 </html>
