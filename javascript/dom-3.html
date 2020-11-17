@@ -8,10 +8,14 @@
 <body>
     <input type="text">
     <button onclick="add()">CLICK</button>
+    <div id="output" class="output"></div>
     <script>
         function add(){
             let input = document.querySelector('input').value;
-            alert(input);
+            // alert(input);
+            document.getElementById('output').textContent = input;
+            // document.querySelector('.output').textContent = input;
+            // document.getElementsByClassName('output')[0].textContent = input;
         }
 
     </script>
