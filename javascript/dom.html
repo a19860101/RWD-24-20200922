@@ -7,8 +7,8 @@
 </head>
 <body>
     <button class="btns" id="btn">CLICK</button>
-    <button class="btns">CLICK 2</button>
-    <button class="btns">CLICK 3</button>
+    <button class="btns" onclick="test()">CLICK 2</button>
+    <!-- <button class="btns">CLICK 3</button> -->
     <script>
         //抓id 
         let b = document.getElementById('btn');
@@ -32,8 +32,13 @@
         // let b = document.getElementsByTagName('button');
         // let b = document.querySelectorAll('button')[0];
         
+        function test(){
+            alert('Hello Javascript!!!!!');
+        }
 
-        console.log(b);
+        b.onclick = function(){
+            test();
+        }
     </script>
 </body>
 </html>
