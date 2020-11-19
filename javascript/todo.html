@@ -4,19 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * 
+        {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+            border-bottom: 1px dotted #000;
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8caca;
+        }
+    </style>
 </head>
 <body>
-    <input type="text">
-    <button onclick="add2()">新增事項</button>
-    <ul id="todos">
+    <div class="container">
 
-    </ul>
+        <input type="text">
+        <button onclick="add()">新增事項</button>
+        <ul id="todos">
+            <li>做作業<span class="del">刪除</span></li>
+            <li>洗碗<span class="del">刪除</span></li>
+        </ul>
+    </div>
     <script>
         function add(){
             let input = document.querySelector('input').value;
             let todos = document.querySelector('#todos');
             let li = document.createElement('li');
+            let span = document.createElement('span');
+            span.append('刪除');
             li.append(input);
+            li.append(span);
             todos.append(li);
 
             document.querySelector('input').value = '';
