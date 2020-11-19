@@ -23,6 +23,10 @@
             justify-content: space-between;
             background-color: #f8caca;
         }
+        .completed {
+            text-decoration: line-through;
+            background-color: #ccc;
+        }
     </style>
 </head>
 <body>
@@ -31,8 +35,8 @@
         <input type="text">
         <button onclick="add()">新增事項</button>
         <ul id="todos">
-            <li>做作業<span class="del active">刪除</span></li>
-            <li>洗碗<span class="del">刪除</span></li>
+            <li class="item completed">做作業<span class="del active">刪除</span></li>
+            <li class="item">洗碗<span class="del">刪除</span></li>
         </ul>
     </div>
     <script>
@@ -45,6 +49,7 @@
             span.classList.add('del')
             li.append(input);
             li.append(span);
+            li.classList.add('item');
             todos.append(li);
 
             document.querySelector('input').value = '';
@@ -72,6 +77,11 @@
             // console.log(e.target.classList.includes());
             // const s = Array.from(e.target.classList);
             // console.log(s.includes('del'));
+
+            if(e.target.className.indexOf('item') > -1){
+                console.log('complete');
+                e.target.classList.toggle('completed');
+            }
         }
 
         // const li = document.querySelectorAll('li');
