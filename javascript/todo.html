@@ -61,13 +61,24 @@
         }
 
         document.body.onclick = function(e){
-            // console.log(e.target.className)
+            console.log(e)
             // console.log(e.target)
+            // console.log(e.target.className)
             if(e.target.className.indexOf('del') > -1){
                 console.log('success');
                 e.target.parentElement.remove();
             }
+
+            // console.log(e.target.classList.includes());
+            // const s = Array.from(e.target.classList);
+            // console.log(s.includes('del'));
         }
+
+        // const li = document.querySelectorAll('li');
+        const li = document.getElementsByTagName('li');
+        console.log(li);
+        const li2 = Array.from(li);
+        console.log(li2);
     </script>
 </body>
 </html>
