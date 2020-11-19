@@ -70,5 +70,17 @@
             </p>
         </div>
     </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tabLink of tabLinks){
+            tabLink.onclick = function(e){
+                for(let tabLink of tabLinks){
+                    tabLink.classList.remove('active');
+                }
+                e.target.classList.add('active');
+            }
+        }
+
+    </script>
 </body>
 </html>
