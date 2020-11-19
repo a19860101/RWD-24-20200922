@@ -8,14 +8,16 @@
 <body>
     <input type="text">
     <button onclick="add()">新增事項</button>
-    <div id="output">
-        
-    </div>
+    <ul id="todos">
+
+    </ul>
     <script>
         function add(){
             let input = document.querySelector('input').value;
-            let output = document.querySelector('#output');
-            output.append(input);
+            let todos = document.querySelector('#todos');
+            let li = document.createElement('li');
+            li.append(input);
+            todos.append(li);
         }
     </script>
 </body>
