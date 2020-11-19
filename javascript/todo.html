@@ -31,7 +31,7 @@
         <input type="text">
         <button onclick="add()">新增事項</button>
         <ul id="todos">
-            <li>做作業<span class="del">刪除</span></li>
+            <li>做作業<span class="del active">刪除</span></li>
             <li>洗碗<span class="del">刪除</span></li>
         </ul>
     </div>
@@ -61,10 +61,11 @@
         }
 
         document.body.onclick = function(e){
-            // console.log(e)
+            // console.log(e.target.className)
             // console.log(e.target)
-            if(e.target.className === 'del'){
+            if(e.target.className.indexOf('del') > -1){
                 console.log('success');
+                e.target.parentElement.remove();
             }
         }
     </script>
