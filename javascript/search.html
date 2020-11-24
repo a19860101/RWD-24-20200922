@@ -20,17 +20,33 @@
         <li>冷露歐蕾</li>
         <li>白玉歐蕾</li>
         <li>熟成檸果</li>
+        <li>Latte</li>
     </ul>
     <script>
+        //區分大小寫
+        // function search(){
+        //     let search_txt = document.querySelector('#search').value;
+        //     console.log(search_txt);
+        //     let li = document.querySelectorAll('li');
+        //     for(let data of li){
+        //         if(data.textContent.indexOf(search_txt) > -1){
+        //             data.style.display = '';
+        //         }else{
+        //             data.style.display = 'none';
+        //         }
+        //     }
+        // }
+
+        //沒有區分大小寫
         function search(){
             let search_txt = document.querySelector('#search').value;
             console.log(search_txt);
             let li = document.querySelectorAll('li');
             for(let data of li){
-                if(data.textContent.indexOf(search_txt) > -1){
+                if(data.textContent.toUpperCase().indexOf(search_txt.toUpperCase()) > -1){
                     data.style.display = '';
                 }else{
-                    data.style.display = 'none'
+                    data.style.display = 'none';
                 }
             }
         }
