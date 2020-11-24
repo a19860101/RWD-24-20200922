@@ -10,6 +10,7 @@
         }
         .modal.active {
             display: block;
+            animation: fade-in .6s;
         }
         .modal-overlay {
             position: fixed;
@@ -27,14 +28,19 @@
             padding: 30px;
             border-radius: 5px;
         }
+        @keyframes fade-in {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
     </style>
 </head>
 <body>
     <a href="#" class="modal-btn" data-target="#about">About</a>
     <a href="#" class="modal-btn" data-target="#service">Service</a>
+    <a href="#" class="modal-btn" data-target="#contact">Contact</a>
    
     <div class="modal" id="about">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h2>About</h2>
@@ -50,7 +56,7 @@
         </div>
     </div>
     <div class="modal" id="service">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h2>Service</h2>
@@ -65,6 +71,34 @@
                     <li>menu</li>
                     <li>menu</li>
                 </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">close</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="contact">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Contact</h2>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div>
+                        <label for="">姓名</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">電話</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Mail</label>
+                        <input type="text">
+                    </div>
+                    <input type="submit" value="送出">
+                </form>
             </div>
             <div class="modal-footer">
                 <a href="#" class="modal-close">close</a>
