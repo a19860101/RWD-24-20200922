@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="images/4643301_500.jpg" class="picture">
+        <div class="thumbs">
+            <img src="images/4643301_500.jpg" width="150" class="thumb">
+            <img src="images/4643302_500.jpg" width="150" class="thumb">
+            <img src="images/4643303_500.jpg" width="150" class="thumb">
+        </div>
+    </div>
+    <script>
+        let thumb = document.querySelectorAll('.thumb');
+        for(let th of thumb){
+            console.log(th)
+            th.onclick = function(e){
+                // let newImg = e.target.src;
+                let newImg = e.target.getAttribute('src');
+                console.log(newImg);
+                document.querySelector('.picture').setAttribute('src',newImg);
+            }
+
+        }
+    </script>
+</body>
+</html>
