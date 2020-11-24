@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <ul id="drinks">
+
+        </ul>
+    </div>
     <script>
         let url = 'data.json';
         
@@ -16,7 +21,14 @@
             //     console.log(d.name)
             // }
             data.forEach(function(d){
-                console.log(d.name);
+                let drinks = document.querySelector('#drinks');
+                let li = document.createElement('li');
+                let span = document.createElement('span');
+                span.append(d.id);
+                span.classList.add('number');
+                li.classList.add('item');
+                li.append(span,d.name);
+                drinks.append(li);
             })
         })
 
