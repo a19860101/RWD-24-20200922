@@ -17,13 +17,19 @@
         <div>{{content}}</div>
         <div>{{test}}</div>
         <ul>
-            <li v-for="item in items" class="item">{{item}}</li>
+            <li v-for="(item,idx) in items" class="item">{{item}} -- {{idx}}</li>
         </ul>
+        <template v-for="(item,idx) in items">
+            <h2>{{item}}</h2>
+            <span>{{idx}}</span>
+        </template>
         <div v-html="test"></div>
         <div v-text="test"></div>
 
         <img v-bind:src="cover" alt="">
         <img :src="cover" alt="">
+
+        <span v-for="n of 100">{{n}}</span>
     </div>
     <script>
         const app = Vue.createApp({
