@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+
+        <button v-on:click="hello()">click</button>
+        <div>
+            {{title}}
+        </div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    title: ''
+                }
+            },
+            methods:{
+                hello(){
+                    // alert('hello vue');
+                    this.title = 'Hello Vue!!!'
+                }
+            }
+        })
+        app.mount('#app')
+    </script>
+</body>
+</html>
