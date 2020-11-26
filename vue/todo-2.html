@@ -10,7 +10,7 @@
     <div id="app">
         <input type="text" v-model="input"><button @click="add()">新增事項</button>
         <ul>
-            <li v-for="(item,idx) in items">{{item.title}} -- <span @click="del(idx)">刪除</span></li>
+            <li v-for="(item,idx) in items" @click="completed(idx)">{{item.title}} -- <span @click="del(idx)">刪除</span></li>
         </ul>
     </div>
     <script>
@@ -44,6 +44,10 @@
                 },
                 del(idx){
                     this.items.splice(idx,1);
+                },
+                completed(idx){
+                    this.items[idx].completed = !this.items[idx].completed;
+                    console.log(this.items[idx].completed);
                 }
             }
         })
