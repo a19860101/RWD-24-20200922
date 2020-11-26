@@ -5,18 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .item {
+            color: #0a5;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <h1>{{title}}</h1>
         <div>{{content}}</div>
+        <div>{{test}}</div>
+        <ul>
+            <li v-for="item in items" class="item">{{item}}</li>
+        </ul>
+        <div v-html="test"></div>
+        <div v-text="test"></div>
+
+        <img v-bind:src="cover" alt="">
+        <img :src="cover" alt="">
     </div>
     <script>
         const app = Vue.createApp({
             data(){
                 return {
                     title: 'Hello Vue!!',
-                    content: '123456789'
+                    content: '123456789',
+                    cover:'https://picsum.photos/id/34/600',
+                    test: '<b>HELLO</b>',
+                    items:[
+                        'apple',
+                        'banana',
+                        'cat',
+                        'dog'
+                    ]
+                    
                 }
             }
         });
