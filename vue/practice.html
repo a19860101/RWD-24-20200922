@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{title}}</h2>
+        <div class="gallery">
+            <img :src="image" alt="">
+        </div>
+        <div>
+            <img :src="prod" v-for="prod of products" width="100">
+        </div>
+        <h3>包裝內容物</h3>
+        <ul>
+            <li v-for="inbox of inBoxes">{{inbox}}</li>
+        </ul>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    title: 'iPhone 12',
+                    image: 'images/iphone-12-black-select-2020.png',
+                    inBoxes:['iPhone','USB-C 對 Lightning 連接線'],
+                    products:[
+                        'images/iphone-12-black-select-2020.png',
+                        'images/iphone-12-red-select-2020.png',
+                        'images/iphone-12-green-select-2020.png',
+                        'images/iphone-12-blue-select-2020.png',
+                        'images/iphone-12-white-select-2020.png',
+                    ]
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
