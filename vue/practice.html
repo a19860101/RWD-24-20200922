@@ -13,7 +13,7 @@
             <img :src="image" alt="">
         </div>
         <div>
-            <img :src="prod" v-for="prod of products" width="100">
+            <img :src="prod.image" v-for="(prod,idx) of products" width="100" @click="changeProd(idx)">
         </div>
         <h3>包裝內容物</h3>
         <ul>
@@ -28,12 +28,38 @@
                     image: 'images/iphone-12-black-select-2020.png',
                     inBoxes:['iPhone','USB-C 對 Lightning 連接線'],
                     products:[
-                        'images/iphone-12-black-select-2020.png',
-                        'images/iphone-12-red-select-2020.png',
-                        'images/iphone-12-green-select-2020.png',
-                        'images/iphone-12-blue-select-2020.png',
-                        'images/iphone-12-white-select-2020.png',
+                        {
+                            id:1,
+                            image:'images/iphone-12-black-select-2020.png',
+                            color:'黑色'
+                        },
+                        {
+                            id:2,
+                            image: 'images/iphone-12-red-select-2020.png',
+                            color:'紅色'
+                        },
+                        {
+                            id:3,
+                            image:'images/iphone-12-green-select-2020.png',
+                            color:'綠色'
+                        },
+                        {
+                            id:4,
+                            image:'images/iphone-12-blue-select-2020.png',
+                            color:'藍色'
+                        },
+                        {
+                            id:5,
+                            image:'images/iphone-12-white-select-2020.png',
+                            color:'白色'
+                        },
                     ]
+                }
+            },
+            methods:{
+                changeProd(idx){
+                    console.log(this.products[idx].image);
+                    this.image = this.products[idx].image
                 }
             }
         });
