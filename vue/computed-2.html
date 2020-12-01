@@ -26,11 +26,13 @@
             },
             methods:{
                 m(){
+                    console.log('methods');
                     return this.number > 5 ? 'Success':'Error';
                 }
             },
             computed:{
                 c(){
+                    console.log('computed');
                     return this.number2 > 5 ? 'Success':'Error';
                 }
             }
