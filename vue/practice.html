@@ -8,13 +8,13 @@
 </head>
 <body>
     <div id="app">
-        <h2>{{title}}</h2>
+        <h2>{{title}} {{color}}</h2>
         <div class="gallery">
             <img :src="image" alt="">
         </div>
-        <div>
-            <img :src="prod.image" v-for="(prod,idx) of products" width="100" @click="changeProd(idx)">
-        </div>
+        <template v-for="(prod,idx) of products">
+            <img :src="prod.image" width="100" @click="changeProd(idx)">
+        </template>
         <h3>包裝內容物</h3>
         <ul>
             <li v-for="inbox of inBoxes">{{inbox}}</li>
@@ -25,8 +25,9 @@
             data(){
                 return {
                     title: 'iPhone 12',
-                    image: 'images/iphone-12-black-select-2020.png',
+                    // image: 'images/iphone-12-black-select-2020.png',
                     inBoxes:['iPhone','USB-C 對 Lightning 連接線'],
+                    currentProd:0,
                     products:[
                         {
                             id:1,
@@ -58,8 +59,19 @@
             },
             methods:{
                 changeProd(idx){
-                    console.log(this.products[idx].image);
-                    this.image = this.products[idx].image
+                    // console.log(this.products[idx].image);
+                    // this.image = this.products[idx].image
+                    this.currentProd = idx;
+                    console.log(idx)
+                }
+                
+            },
+            computed:{
+                image(){
+                    return this.products[this.currentProd].image;
+                },
+                color(){
+                    return this.products[this.currentProd].color;
                 }
             }
         });
