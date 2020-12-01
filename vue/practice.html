@@ -67,11 +67,14 @@
                 
             },
             computed:{
+                prod(){
+                    return this.products[this.currentProd];
+                },
                 image(){
-                    return this.products[this.currentProd].image;
+                    return this.prod.image;
                 },
                 color(){
-                    return this.products[this.currentProd].color;
+                    return this.prod.color;
                 }
             }
         });
