@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="app">
-        <todo-input></todo-input>
+        <todo-input @add-item="newItem"></todo-input>
         <ul>
             <todo-items v-for="item in items" :todoitem="item"></todo-items>
         </ul>
@@ -36,10 +36,30 @@
                         }
                     ]
                 }
+            },
+            methods:{
+                newItem(v){
+                    this.items.push({
+                        title:v,
+                        completed:false
+                    });
+                }
             }
         });
         app.component('todo-input',{
-            template:`<input type="text"><button>新增事項</button>`
+            template:`
+                <input type="text" v-model="input">
+                <button @click="addItem()">新增事項</button>{{input}}`,
+            data(){
+                return {
+                    input:''
+                }
+            },
+            methods:{
+                addItem(){
+                    this.$emit('add-item',this.input);
+                }
+            }
         });
         app.component('todo-items',{
             props:['todoitem'],
