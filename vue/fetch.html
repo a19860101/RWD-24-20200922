@@ -10,7 +10,7 @@
         * {
             box-sizing: border-box;
         }
-        #app {
+        .container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -25,12 +25,16 @@
 </head>
 <body>
     <div id="app">
-        <div v-for="photo in photos" class="box">
-            <img :src="photo.download_url" width="200">
-            <h2>
-                {{photo.author}}
-            </h2>
-            <div> width: {{photo.width}}px / height: {{photo.height}}px</div>
+        <button @click="loadpic()">載入圖片</button>
+        <div class="container">
+
+            <div v-for="photo in photos" class="box">
+                <img :src="photo.download_url" width="200">
+                <h2>
+                    {{photo.author}}
+                </h2>
+                <div> width: {{photo.width}}px / height: {{photo.height}}px</div>
+            </div>
         </div>
     </div>
     <script>
@@ -40,6 +44,21 @@
                     photos:[]
                 }
             },
+            methods:{
+                loadpic(){
+                    const url = 'https://picsum.photos/v2/list';
+                    axios.get(url,{
+                        params:{
+                            limit: 6,
+                            page: 3
+                        }
+                    })
+                    .then(res => {
+                        console.log(res.data);
+                        this.photos = res.data;
+                    });
+                }
+            }
             // created(){
             //     const url = 'https://picsum.photos/v2/list?limit=10&page=3';
             //     fetch(url)
@@ -49,19 +68,19 @@
             //         this.photos = data;
             //     })
             // }
-            created(){
-                const url = 'https://picsum.photos/v2/list';
-                axios.get(url,{
-                    params:{
-                        limit: 6,
-                        page: 3
-                    }
-                })
-                .then(res => {
-                    console.log(res.data);
-                    this.photos = res.data;
-                });
-            }
+            // created(){
+            //     const url = 'https://picsum.photos/v2/list';
+            //     axios.get(url,{
+            //         params:{
+            //             limit: 6,
+            //             page: 3
+            //         }
+            //     })
+            //     .then(res => {
+            //         console.log(res.data);
+            //         this.photos = res.data;
+            //     });
+            // }
         });
         app.mount('#app');
     </script>
