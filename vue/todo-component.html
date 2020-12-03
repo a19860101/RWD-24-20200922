@@ -8,17 +8,16 @@
 </head>
 <body>
     <div id="app">
-        <input type="text"><button>新增事項</button>
+        <todo-input></todo-input>
         <ul>
-            <li v-for="item in items">{{item.title}} -- <span>刪除</span></li>
+            <todo-items></todo-items>
         </ul>
     </div>
     <script>
         const app = Vue.createApp({
             data(){
                 return {
-
-                items:[
+                    items:[
                         {
                             title:'吃飯',
                             completed:false
@@ -35,6 +34,12 @@
                 }
             }
         });
+        app.component('todo-input',{
+            template:`<input type="text"><button>新增事項</button>`
+        });
+        app.component('todo-items',{
+            template: `<li></li>`,
+        })
         app.mount('#app');
 
     </script>
