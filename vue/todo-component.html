@@ -10,7 +10,7 @@
     <div id="app">
         <todo-input></todo-input>
         <ul>
-            <todo-items></todo-items>
+            <todo-items v-for="item in items" :todoitem="item"></todo-items>
         </ul>
     </div>
     <script>
@@ -29,6 +29,10 @@
                         {
                             title:'寄信',
                             completed:false
+                        },
+                        {
+                            title:'寄信',
+                            completed:false
                         }
                     ]
                 }
@@ -38,7 +42,8 @@
             template:`<input type="text"><button>新增事項</button>`
         });
         app.component('todo-items',{
-            template: `<li></li>`,
+            props:['todoitem'],
+            template: `<li>{{todoitem.title}} --- <span>刪除</span></li>`,
         })
         app.mount('#app');
 
