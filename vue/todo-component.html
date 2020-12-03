@@ -58,6 +58,7 @@
             methods:{
                 addItem(){
                     this.$emit('add-item',this.input);
+                    this.input = '';
                 }
             }
         });
