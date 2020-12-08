@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: "Gill Sans MT";
+            box-sizing: border-box;
         }
         nav {
             width: 100%;
@@ -73,10 +74,31 @@
         #about h1 {
             font-size: 120px;
         }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0 10%;
+        }
+        img {
+            width: 100%;
+        }
+        .col-6 {
+            flex: 0 0 calc(100% / 12 * 6);
+            padding: 15px;
+        }
+        .col-3 {
+            flex: 0 0 calc(100% / 12 * 3);
+            padding: 15px;
+        }
+        .col-12 {
+            flex: 0 0 calc(100% / 12 * 12);
+            padding: 15px;
+        }
     </style>
 </head> 
 <body>
-    <nav class="active">
+    <nav>
         <a href="#" data-target="#about">About</a>
         <a href="#" data-target="#service">Service</a>
         <a href="#" data-target="#product">Product</a>
@@ -85,9 +107,36 @@
     <div id="about">
         <h1 class="animated fadeIn">TITLE</h1>
     </div>
-    <div id="service"></div>
-    <div id="product"></div>
-    <div id="contact"></div>
+    <div id="service" class="container">
+        <div class="col-6">
+            <img src="https://picsum.photos/id/15/800/600">
+        </div>
+        <div class="col-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magni accusantium hic sunt laboriosam veritatis, numquam eum repudiandae? Porro similique architecto eum? Incidunt ipsa voluptatum perferendis saepe optio, quisquam molestias.
+            </p>
+        </div>
+    </div>
+    <div id="product" class="container">
+        <div class="col-3">
+            <img src="https://picsum.photos/id/5/300" alt="">
+        </div>
+        <div class="col-3">
+            <img src="https://picsum.photos/id/25/300" alt="">
+        </div>
+        <div class="col-3">
+            <img src="https://picsum.photos/id/35/300" alt="">
+        </div>
+        <div class="col-3">
+            <img src="https://picsum.photos/id/45/300" alt="">
+        </div>
+    </div>
+    <div id="contact" class="container">
+        <div class="col-12">
+            <img src="https://picsum.photos/id/69/800/400" alt="">
+        </div>
+    </div>
     <a href="#" id="gotop">TOP</a>
     <script>
         $(function(){
