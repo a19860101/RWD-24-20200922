@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css'/>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <style>
         * {
@@ -49,6 +50,15 @@
             clip-path: circle();
             display: none;
         }
+        #about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        #about h1 {
+            font-size: 120px;
+        }
     </style>
 </head> 
 <body>
@@ -58,35 +68,43 @@
         <a href="#" data-target="#product">Product</a>
         <a href="#" data-target="#contact">Contact</a>
     </nav>
-    <div id="about"></div>
+    <div id="about">
+        <h1 class="animated fadeIn">TITLE</h1>
+    </div>
     <div id="service"></div>
     <div id="product"></div>
     <div id="contact"></div>
     <a href="#" id="gotop">TOP</a>
     <script>
         $(function(){
-            $('nav').find('a').click(function(){
+            $('nav').find('a').click(function(e){
                 let target = $(this).data('target');
                 let offset = $(target).offset().top;
                 console.log(offset);
                 $('html,body').animate({
                     scrollTop: offset
                 })
+                e.preventDefault();
             })
-            $('#gotop').click(function(){
+            $('#gotop').click(function(e){
                 $('html,body').animate({
                     scrollTop:0
                 })
+                e.preventDefault();
             })
             $(window).scroll(function(){
                 let h = $(this).scrollTop();
                 console.log(h)
+                let ani_in = 'rollIn';
+                let ani_out = 'rollOut';
                 if(h > 600){
                     // $('#gotop').show();
-                    $('#gotop').fadeIn();
+                    // $('#gotop').fadeIn();
+                    $('#gotop').show().removeClass(`animated ${ani_out}`).addClass(`animated ${ani_in}`);
                 }else{
                     // $('#gotop').hide();
-                    $('#gotop').fadeOut();
+                    // $('#gotop').fadeOut();
+                    $('#gotop').removeClass(`animated ${ani_in}`).addClass(`animated ${ani_out}`);
                 }
             })
         })
