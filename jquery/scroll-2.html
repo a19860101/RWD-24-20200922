@@ -21,11 +21,25 @@
             background-color: #222;
 
             position: fixed;
+            z-index: 999;
+            transition: .3s;
+        }
+        nav.active {
+            height: 50px;
+            background-color: #fff;
+            transition: .3s;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: #fff;
+            letter-spacing: 3px;
+            transition: .3s;
+        }
+        nav.active a {
+            letter-spacing: 0;
+            color: #222;
+            transition: .3s;
         }
         #about, #service, #product, #contact {
             width: 100%;
@@ -62,7 +76,7 @@
     </style>
 </head> 
 <body>
-    <nav>
+    <nav class="active">
         <a href="#" data-target="#about">About</a>
         <a href="#" data-target="#service">Service</a>
         <a href="#" data-target="#product">Product</a>
@@ -101,10 +115,12 @@
                     // $('#gotop').show();
                     // $('#gotop').fadeIn();
                     $('#gotop').show().removeClass(`animated ${ani_out}`).addClass(`animated ${ani_in}`);
+                    $('nav').addClass('active');
                 }else{
                     // $('#gotop').hide();
                     // $('#gotop').fadeOut();
                     $('#gotop').removeClass(`animated ${ani_in}`).addClass(`animated ${ani_out}`);
+                    $('nav').removeClass('active');
                 }
             })
         })
