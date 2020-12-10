@@ -32,9 +32,13 @@ nav {
 }
 .nav-toggle-menu {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
+    display: none;
+}
+.nav-toggle-menu.active {
+    display: flex;
 }
 .nav-menu {
     display: flex;
@@ -66,6 +70,7 @@ nav {
     }
     .nav-toggle-menu {
         flex-direction: row;
+        display: flex;
     }
     .nav-menu {
         flex-direction: row;

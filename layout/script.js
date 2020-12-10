@@ -18,4 +18,7 @@ $(function(){
         })
         e.preventDefault();
     })
+    $('.nav-button').click(function(){
+        $('.nav-toggle-menu').toggleClass('active');
+    })
 })
