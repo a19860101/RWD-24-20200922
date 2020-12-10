@@ -1,3 +1,4 @@
+new WOW().init();
 $(function(){
     $('.nav-menu').find('a').click(function(e){
         e.preventDefault();
