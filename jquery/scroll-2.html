@@ -38,10 +38,17 @@
             letter-spacing: 3px;
             transition: .3s;
         }
+        nav a.active {
+            color: #fa0;
+            text-decoration: underline;
+        }
         nav.active a {
             letter-spacing: 0;
             color: #222;
             transition: .3s;
+        }
+        nav.active a.active {
+            color: #fa0;
         }
         #about, #service, #product, #contact {
             width: 100%;
@@ -87,7 +94,6 @@
         .col-6 {
             flex: 0 0 calc(100% / 12 * 6);
             padding: 15px;
-            background-color: #f00;
         }
         .col-3 {
             flex: 0 0 calc(100% / 12 * 3);
@@ -151,6 +157,8 @@
                     scrollTop: offset
                 })
                 e.preventDefault();
+                // $('nav').find('a').removeClass('active');
+                // $(this).addClass('active');
             })
             $('#gotop').click(function(e){
                 $('html,body').animate({
@@ -174,6 +182,17 @@
                     $('#gotop').removeClass(`animated ${ani_in}`).addClass(`animated ${ani_out}`);
                     $('nav').removeClass('active');
                 }
+                $('nav').find('a').each(function(){
+                    // console.log($(this));
+                    let target = $(this).data('target');
+                    let offset = $(target).offset().top;
+                    // console.log(offset);
+                    if(h > offset-200){
+                        $('nav').find('a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
+
             })
         })
     </script>
