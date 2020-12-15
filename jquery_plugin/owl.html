@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <style>
@@ -74,7 +75,7 @@
             $('#slider').owlCarousel({
                 items: 1,
                 loop: true,
-                stagePadding:200 ,
+                stagePadding:0 ,
                 dots: true,
                 autoplay: true,
                 autoplayTimeout: 5000,
@@ -82,7 +83,9 @@
                 dotsSpeed: 600,
 
                 nav: true,
-                navSpeed: 600
+                navSpeed: 600,
+                animateOut:'slideOutDown',
+                animateIn:'rotateIn'
             });
 
             $('#products').owlCarousel({
