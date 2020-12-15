@@ -8,16 +8,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         .box {
-            width: 200px;
+            width: 250px;
             border: 1px solid #000;
             padding: 10px;
             margin: 5px;
         }
+        .container {
+            /* width: 840px; */
+            margin: auto;
+        }
     </style>
     <script>
         $(function(){
-            $('.container').masonry();
+            $('.container').masonry({
+                isFitWidth: true
+            });
         })
     </script>
 </head>
