@@ -13,6 +13,10 @@
             width: 1000px;
             margin: auto;
         }
+        #products {
+            width: 1000px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -23,11 +27,60 @@
         <img src="https://picsum.photos/id/33/1600/800" alt="">
         <img src="https://picsum.photos/id/53/1600/800" alt="">
     </div>
+    <div id="products" class="owl-carousel owl-theme">
+        <div>
+            <img src="https://picsum.photos/id/43/300/" alt="">
+            <span>title 1</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/44/300/" alt="">
+            <span>title 2</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/45/300/" alt="">
+            <span>title 3</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/46/300/" alt="">
+            <span>title 4</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/47/300/" alt="">
+            <span>title 5</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/48/300/" alt="">
+            <span>title 6</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/49/300/" alt="">
+            <span>title 7</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/50/300/" alt="">
+            <span>title 8</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/51/300/" alt="">
+            <span>title 9</span>
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/52/300/" alt="">
+            <span>title 10</span>
+        </div>
+    </div>
     <script>
         $(function(){
             $('#slider').owlCarousel({
-                items: 1
+                items: 1,
+                loop: true
             });
+
+            $('#products').owlCarousel({
+                items: 4,
+                margin: 30,
+                center: true
+            })
         })
 
     </script>
