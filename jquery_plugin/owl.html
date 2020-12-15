@@ -73,7 +73,16 @@
         $(function(){
             $('#slider').owlCarousel({
                 items: 1,
-                loop: true
+                loop: true,
+                stagePadding:200 ,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1500,
+                dotsSpeed: 600,
+
+                nav: true,
+                navSpeed: 600
             });
 
             $('#products').owlCarousel({
